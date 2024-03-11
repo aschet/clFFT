@@ -238,6 +238,8 @@ if( MINGW AND UNICODE )
 	add_definitions( "-DUNICODE -D_UNICODE" )
 endif( )
 
+add_compile_definitions(CL_TARGET_OPENCL_VERSION=300)
+
 # Print out compiler flags for viewing/debug
 message( STATUS "CMAKE_CXX_COMPILER flags: " ${CMAKE_CXX_FLAGS} )
 message( STATUS "CMAKE_CXX_COMPILER debug flags: " ${CMAKE_CXX_FLAGS_DEBUG} )

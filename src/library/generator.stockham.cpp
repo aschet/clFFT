@@ -3690,22 +3690,22 @@ namespace StockhamGenerator
 					{ 
 						if(inInterleaved)
 						{
-							if(!rcSimple)	{	str += "__global "; str += r2Type; str += " *lwbIn2;\n\t"; }
-												str += "__global "; str += r2Type; str += " *lwbIn;\n\t";  
+							if(!rcSimple)	{	str += "__global const "; str += r2Type; str += " *lwbIn2;\n\t"; }
+												str += "__global const "; str += r2Type; str += " *lwbIn;\n\t";  
 						}
 						else if(inReal)
 						{
-							if(!rcSimple)	{	str += "__global "; str += rType; str += " *lwbIn2;\n\t"; }
-												str += "__global "; str += rType; str += " *lwbIn;\n\t";
+							if(!rcSimple)	{	str += "__global const "; str += rType; str += " *lwbIn2;\n\t"; }
+												str += "__global const "; str += rType; str += " *lwbIn;\n\t";
 
 						}
 						else
 						{
-							if(!rcSimple)	{	str += "__global "; str += rType; str += " *lwbInRe2;\n\t"; }
-							if(!rcSimple)	{	str += "__global "; str += rType; str += " *lwbInIm2;\n\t"; }
+							if(!rcSimple)	{	str += "__global const "; str += rType; str += " *lwbInRe2;\n\t"; }
+							if(!rcSimple)	{	str += "__global const "; str += rType; str += " *lwbInIm2;\n\t"; }
 							  
-												str += "__global "; str += rType; str += " *lwbInRe;\n\t"; 
-												str += "__global "; str += rType; str += " *lwbInIm;\n\t"; 
+												str += "__global const "; str += rType; str += " *lwbInRe;\n\t"; 
+												str += "__global const "; str += rType; str += " *lwbInIm;\n\t"; 
 							
 						}
 					}
@@ -3769,12 +3769,12 @@ namespace StockhamGenerator
 						{
 							if(inInterleaved)
 							{
-								str += "__global "; str += r2Type; str += " *lwbIn;\n\t";
+								str += "__global const "; str += r2Type; str += " *lwbIn;\n\t";
 							}
 							else
 							{
-								str += "__global "; str += rType; str += " *lwbInRe;\n\t";
-								str += "__global "; str += rType; str += " *lwbInIm;\n\t";
+								str += "__global const "; str += rType; str += " *lwbInRe;\n\t";
+								str += "__global const "; str += rType; str += " *lwbInIm;\n\t";
 							}
 						}
 
@@ -3875,13 +3875,13 @@ namespace StockhamGenerator
 						{
 							if(inInterleaved)
 							{
-								if(!rcSimple) {	str += "lwbIn2 = (__global "; str += r2Type; str += " *)gb + iOffset2;\n\t"; }
-												str += "lwbIn  = (__global "; str += r2Type; str += " *)gb + iOffset;\n\t"; 
+								if(!rcSimple) {	str += "lwbIn2 = (__global const "; str += r2Type; str += " *)gb + iOffset2;\n\t"; }
+												str += "lwbIn  = (__global const "; str += r2Type; str += " *)gb + iOffset;\n\t"; 
 							}
 							else
 							{
-								if(!rcSimple) {	str += "lwbIn2 = (__global "; str += rType; str += " *)gb + iOffset2;\n\t"; }
-												str += "lwbIn  = (__global "; str += rType; str += " *)gb + iOffset;\n\t";
+								if(!rcSimple) {	str += "lwbIn2 = (__global const "; str += rType; str += " *)gb + iOffset2;\n\t"; }
+												str += "lwbIn  = (__global const "; str += rType; str += " *)gb + iOffset;\n\t";
 
 							}
 						}
