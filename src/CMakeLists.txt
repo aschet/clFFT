@@ -14,7 +14,7 @@
 # limitations under the License.
 # ########################################################################
 
-cmake_minimum_required( VERSION 3.1 )
+cmake_minimum_required( VERSION 3.10 )
 
 if( CMAKE_GENERATOR MATCHES "NMake" )
 	option( NMAKE_COMPILE_VERBOSE "Print compile and link strings to the console" OFF )
